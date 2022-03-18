@@ -8,13 +8,278 @@
     <title>2022 F1 Fantasy Home Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.csss">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
+<body class="home">
 
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-2" href="#">F1 Fantasy 2022</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active fs-4" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-4" href="./teams.html">Teams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-4" href="./standings.html">Standings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-4" href="./rules.html">Rules and Scoring</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Carousel of every team and driver -->
+    <div class="imagesCarousel border border-dark border-5 my-5">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="./assets/images/allTeams.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="./assets/images/alfaRomeo.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="./assets/images/alpine.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="./assets/images/aston.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="./assets/images/haas.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="./assets/images/maclaren.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="./assets/images/merc.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="./assets/images/rari.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="./assets/images/RB.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="./assets/images/tauri.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="./assets/images/williams.jpeg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="container driversLineup ">
+
+        <h2 class="text-center fs-1">2022 Drivers</h2>
+        <div class="row my-3">
+            <div class="col-3">
+                <div class="card-transparent" style="width: 18rem;">
+                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/L/LEWHAM01_Lewis_Hamilton/lewham01.png.transform/2col-retina/image.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Lewis Hamilton</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card-transparent" style="width: 18rem;">
+                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/G/GEORUS01_George_Russell/georus01.png.transform/2col-retina/image.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">George Russel</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card-transparent" style="width: 18rem;">
+                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/2col-retina/image.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Max Verstappen</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card-transparent" style="width: 18rem;">
+                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/S/SERPER01_Sergio_Perez/serper01.png.transform/2col-retina/image.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Sergio Perez</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-3">
+            <div class="col-3">
+                <div class="card-transparent" style="width: 18rem;">
+                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png.transform/2col-retina/image.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Charles Leclerc</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card-transparent" style="width: 18rem;">
+                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/C/CARSAI01_Carlos_Sainz/carsai01.png.transform/2col-retina/image.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Carlos Sainz</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card-transparent" style="width: 18rem;">
+                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/L/LANNOR01_Lando_Norris/lannor01.png.transform/2col-retina/image.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Lando Norris</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card-transparent" style="width: 18rem;">
+                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/D/DANRIC01_Daniel_Ricciardo/danric01.png.transform/2col-retina/image.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Daniel Ricciardo</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-3">
+            <div class="col-3">
+                <div class="card-transparent" style="width: 18rem;">
+                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/E/ESTOCO01_Esteban_Ocon/estoco01.png.transform/2col-retina/image.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Esteban Ocon</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card-transparent" style="width: 18rem;">
+                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/F/FERALO01_Fernando_Alonso/feralo01.png.transform/2col-retina/image.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Fernando Alonso</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card-transparent" style="width: 18rem;">
+                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/P/PIEGAS01_Pierre_Gasly/piegas01.png.transform/2col-retina/image.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Pierre Gasly</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card-transparent" style="width: 18rem;">
+                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/Y/YUKTSU01_Yuki_Tsunoda/yuktsu01.png.transform/2col-retina/image.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Yuki Tsunoda</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-3">
+            <div class="col-3">
+                <div class="card-transparent" style="width: 18rem;">
+                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/L/LANSTR01_Lance_Stroll/lanstr01.png.transform/2col-retina/image.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Lance Stroll</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card-transparent" style="width: 18rem;">
+                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/S/SEBVET01_Sebastian_Vettel/sebvet01.png.transform/2col-retina/image.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Sebastian Vettel</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card-transparent" style="width: 18rem;">
+                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/A/ALEALB01_Alexander_Albon/alealb01.png.transform/2col-retina/image.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Alexander Albon</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card-transparent" style="width: 18rem;">
+                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/N/NICLAF01_Nicholas_Latifi/niclaf01.png.transform/2col-retina/image.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Nicholas Latifi</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-3">
+            <div class="col-3">
+                <div class="card-transparent" style="width: 18rem;">
+                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/V/VALBOT01_Valtteri_Bottas/valbot01.png.transform/2col-retina/image.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Valtteri Bottas</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card-transparent" style="width: 18rem;">
+                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/G/GUAZHO01_Guanyu_Zhou/guazho01.png.transform/2col-retina/image.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Zhou Guanyu</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card-transparent" style="width: 18rem;">
+                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/K/KEVMAG01_Kevin_Magnussen/kevmag01.png.transform/2col-retina/image.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Kevin Magnussen</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card-transparent" style="width: 18rem;">
+                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/M/MICSCH02_Mick_Schumacher/micsch02.png.transform/2col-retina/image.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Mick Schumacher</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
 
