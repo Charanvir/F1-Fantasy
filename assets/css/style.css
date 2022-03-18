@@ -1,3 +1,5 @@
+
+
 .imagesCarousel {
     width: 70%;
     margin: auto;
@@ -11,11 +13,15 @@
     background:linear-gradient(red, gold);
 }
 .teams{
-    background:linear-gradient(aqua, gold);
+    background-color: aquamarine;
 }
 .standings{
-    background:linear-gradient(green, gold);
+    background-color: chartreuse;
 }
 .rules{
-    background:linear-gradient(black, gold);
+    background-color: bisque;
+}
+
+.scoring {
+    margin: auto;
 }
