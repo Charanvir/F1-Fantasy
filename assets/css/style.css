@@ -13,10 +13,10 @@
     background:linear-gradient(red, gold);
 }
 .teams{
-    background-color: aquamarine;
+    background-color:lightblue;
 }
 .standings{
-    background-color: chartreuse;
+    background-color:palegreen;
 }
 .rules{
     background-color: bisque;
@@ -24,4 +24,12 @@
 
 .scoring {
     margin: auto;
+}
+
+td {
+    font-size: 30px;
+}
+
+th {
+    font-size: 30px;
 }
