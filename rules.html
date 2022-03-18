@@ -39,9 +39,9 @@
     </nav>
 
     <div>
-        <h2 class="text-center fs-1 mt-5">Points Scoring</h2>
+        <h2 class="text-center fs-1 mt-5 rulesTitle">Points Scoring</h2>
         <div class="row">
-            <div class="col-6 scoring">
+            <div class="col-8 scoring">
                 <h3 class="text-center">Qualifying</h3>
                 <table class="table bg-light">
                     <tbody>
@@ -62,6 +62,10 @@
                             <td class="text-success text-end">2 Points</td>
                         </tr>
                         <tr>
+                            <td>Qualified Behind Teammate</td>
+                            <td class="text-danger text-end">-2 Points</td>
+                        </tr>
+                        <tr>
                             <td>Did Not Qualify</td>
                             <td class="text-danger text-end">-5 Points</td>
                         </tr>
@@ -70,7 +74,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-6 scoring">
+            <div class="col-8 scoring">
                 <h3 class="text-center">Qualifying Bonuses</h3>
                 <table class="table bg-light">
                     <tbody>
@@ -120,7 +124,7 @@
         </div>
 
         <div class="row">
-            <div class="col-6 scoring">
+            <div class="col-8 scoring">
                 <h3 class="text-center">Race</h3>
                 <table class="table bg-light">
                     <tbody>
@@ -129,7 +133,7 @@
                             <td class="text-success text-end">1 Point</td>
                         </tr>
                         <tr>
-                            <td>Positions Gained</td>
+                            <td>Positions Gained Relative to Qualifying</td>
                             <td class="text-success text-end">2 Points</td>
                         </tr>
                         <tr>
@@ -141,7 +145,7 @@
                             <td class="text-success text-end">5 Points</td>
                         </tr>
                         <tr>
-                            <td>Positions Lost</td>
+                            <td>Positions Lost Relative to Qualifying</td>
                             <td class="text-danger text-end">-2 Points</td>
                         </tr>
                         <tr>
@@ -154,7 +158,7 @@
         </div>
 
         <div class="row">
-            <div class="col-6 scoring">
+            <div class="col-8 scoring">
                 <h3 class="text-center">Race Position Points</h3>
                 <table class="table bg-light">
                     <tbody>
@@ -217,7 +221,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
-    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
