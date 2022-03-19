@@ -24,10 +24,6 @@ points = [
         score: "0"
     },
     {
-        name: "Manjinder",
-        score: "0"
-    },
-    {
         name: "Randeep",
         score: "0"
     }
