@@ -81,58 +81,58 @@ let bahrainStandingsFunction = function () {
 }
 
 // Saudi Arabia
-// saudi = [
-//     // Randeep
-//     { name: "Lewis Hamilton", quali: , race: , score:  },
-//     { name: "Fernando Alonso", quali: , race: , score:  },
-//     // jaskaran
-//     { name: "Max Verstappen", quali: , race: , score:  },
-//     { name: "Lance Stroll", quali: , race: , score:  },
-//     // Manroop
-//     { name: "Carlos Sainz", quali: , race: , score:  },
-//     { name: "Kevin Magnussen", quali: , race: , score:  },
-//     // Charanvir
-//     { name: "Charles Leclerc", quali: , race: , score:  },
-//     { name: "Esteban Ocon", quali: , race: , score:  },
-//     // Joe
-//     { name: "Pierre Gasly", quali: , race: , score: },
-//     { name: "Daniel Ricciardo", quali: , race: , score:  },
-//     // Gaganvir
-//     { name: "Sergio Perez", quali: , race: , score:  },
-//     { name: "Valtteri Bottas", quali: , race: , score:  },
-//     // Gurvir
-//     { name: "George Russel", quali: , race: , score:  },
-//     { name: "Lando Norris", quali: , race: , score:  }
-// ];
-// let saudiStandings = saudi.sort((a, b) => b.score - a.score);
-// let saudiBody = document.querySelector(".bahrainBody")
-// let saudiStandingsFunction = function () {
-//     counter = 0;
-//     for (i = 0; i < saudiStandings.length; i++) {
-//         counter++
-//         let row = document.createElement("tr")
-//         let header = document.createElement("th");
-//         let teamName = document.createElement("td");
-//         let qualiScore = document.createElement("td");
-//         let raceScore = document.createElement("td");
-//         let teamScore = document.createElement("td");
-//         teamName.innerHTML = saudiStandings[i].name
-//         qualiScore.innerHTML = saudiStandings[i].quali
-//         raceScore.innerHTML = saudiStandings[i].race
-//         teamScore.innerHTML = saudiStandings[i].score
-//         header.setAttribute("scope", "row");
-//         header.innerHTML = counter;
-//         row.appendChild(header);
-//         row.appendChild(teamName);
-//         row.appendChild(qualiScore);
-//         row.appendChild(raceScore);
-//         row.appendChild(teamScore);
-//         saudiBody.appendChild(row);
-//     }
-// }
+saudi = [
+    // Randeep
+    { name: "Lewis Hamilton", quali: -1, race: 0, score: -1 },
+    { name: "Fernando Alonso", quali: 5, race: 0, score: 5 },
+    // jaskaran
+    { name: "Max Verstappen", quali: 8, race: 0, score: 8 },
+    { name: "Lance Stroll", quali: 4, race: 0, score: 4 },
+    // Manroop
+    { name: "Carlos Sainz", quali: 9, race: 0, score: 9 },
+    { name: "Kevin Magnussen", quali: 6, race: 0, score: 6 },
+    // Charanvir
+    { name: "Charles Leclerc", quali: 14, race: 0, score: 14 },
+    { name: "Esteban Ocon", quali: 11, race: 0, score: 11 },
+    // Joe
+    { name: "Pierre Gasly", quali: 7, race: 0, score: 7 },
+    { name: "Daniel Ricciardo", quali: 0, race: 0, score: 0 },
+    // Gaganvir
+    { name: "Sergio Perez", quali: 15, race: 0, score: 15 },
+    { name: "Valtteri Bottas", quali: 8, race: 0, score: 8 },
+    // Gurvir
+    { name: "George Russel", quali: 10, race: 0, score: 10 },
+    { name: "Lando Norris", quali: 4, race: 0, score: 4 }
+];
+let saudiStandings = saudi.sort((a, b) => b.score - a.score);
+let saudiBody = document.querySelector(".saudiBody")
+let saudiStandingsFunction = function () {
+    counter = 0;
+    for (i = 0; i < saudiStandings.length; i++) {
+        counter++
+        let row = document.createElement("tr")
+        let header = document.createElement("th");
+        let teamName = document.createElement("td");
+        let qualiScore = document.createElement("td");
+        let raceScore = document.createElement("td");
+        let teamScore = document.createElement("td");
+        teamName.innerHTML = saudiStandings[i].name
+        qualiScore.innerHTML = saudiStandings[i].quali
+        raceScore.innerHTML = saudiStandings[i].race
+        teamScore.innerHTML = saudiStandings[i].score
+        header.setAttribute("scope", "row");
+        header.innerHTML = counter;
+        row.appendChild(header);
+        row.appendChild(teamName);
+        row.appendChild(qualiScore);
+        row.appendChild(raceScore);
+        row.appendChild(teamScore);
+        saudiBody.appendChild(row);
+    }
+}
 
 
 
 overallScores();
 bahrainStandingsFunction();
-// saudiStandingsFunction();
+saudiStandingsFunction();
