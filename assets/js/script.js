@@ -1,12 +1,12 @@
 // Overall
 points = [
-    { name: "Charanvir", score: "50" },
-    { name: "Gaganvir", score: "22" },
-    { name: "Gurvir", score: "16" },
-    { name: "Jaskaran", score: "26" },
-    { name: "Joe", score: "12" },
-    { name: "Manroop", score: "41" },
-    { name: "Randeep", score: "33" }
+    { name: "Charanvir", score: "75" },
+    { name: "Gaganvir", score: "45" },
+    { name: "Gurvir", score: "30" },
+    { name: "Jaskaran", score: "38" },
+    { name: "Joe", score: "19" },
+    { name: "Manroop", score: "56" },
+    { name: "Randeep", score: "37" }
 ];
 let overallStandings = points.sort((a, b) => b.score - a.score);
 let overallBody = document.querySelector(".overallBody")
@@ -31,27 +31,27 @@ let overallScores = function () {
 
 // Bahrain
 bahrain = [
-    // Randeep
-    { name: "Lewis Hamilton", quali: 11, race: 16, score: 11 + 16 },
-    { name: "Fernando Alonso", quali: 8, race: -2, score: 8 + (-2) },
-    // jaskaran
-    { name: "Max Verstappen", quali: 14, race: -5, score: 14 + (-5) },
-    { name: "Lance Stroll", quali: -1, race: 18, score: -1 + 18 },
-    // Manroop
-    { name: "Carlos Sainz", quali: 9, race: 9, score: 9 + 9 },
-    { name: "Kevin Magnussen", quali: 9, race: 14, score: 9 + 14 },
-    // Charanvir
-    { name: "Charles Leclerc", quali: 15, race: 19, score: 15 + 19 },
-    { name: "Esteban Ocon", quali: 0, race: 16, score: 0 + 16 },
-    // Joe
-    { name: "Pierre Gasly", quali: 6, race: -5, score: 6 + (-5) },
-    { name: "Daniel Ricciardo", quali: -1, race: 12, score: -1 + 12 },
-    // Gaganvir
-    { name: "Sergio Perez", quali: 8, race: -5, score: 8 + (-5) },
-    { name: "Valtteri Bottas", quali: 10, race: 9, score: 10 + 9 },
-    // Gurvir
-    { name: "George Russel", quali: 3, race: 15, score: 3 + 15 },
-    { name: "Lando Norris", quali: 4, race: -6, score: 4 + (-6) }
+    // Randeep 33
+    { name: "Lewis Hamilton", quali: 11, race: 16, score: 27 },
+    { name: "Fernando Alonso", quali: 8, race: -2, score: 6 },
+    // Jaskaran 26
+    { name: "Max Verstappen", quali: 14, race: -5, score: 9 },
+    { name: "Lance Stroll", quali: -1, race: 18, score: 17 },
+    // Manroop 41
+    { name: "Carlos Sainz", quali: 9, race: 9, score: 18 },
+    { name: "Kevin Magnussen", quali: 9, race: 14, score: 23 },
+    // Charanvir 50
+    { name: "Charles Leclerc", quali: 15, race: 19, score: 34 },
+    { name: "Esteban Ocon", quali: 0, race: 16, score: 16 },
+    // Joe 12
+    { name: "Pierre Gasly", quali: 6, race: -5, score: 1 },
+    { name: "Daniel Ricciardo", quali: -1, race: 12, score: 11 },
+    // Gaganvir 22
+    { name: "Sergio Perez", quali: 8, race: -5, score: 3 },
+    { name: "Valtteri Bottas", quali: 10, race: 9, score: 19 },
+    // Gurvir 16
+    { name: "George Russel", quali: 3, race: 15, score: 18 },
+    { name: "Lando Norris", quali: 4, race: -6, score: -2 }
 ];
 let bahrainStandings = bahrain.sort((a, b) => b.score - a.score);
 let bahrainBody = document.querySelector(".bahrainBody")
@@ -82,25 +82,25 @@ let bahrainStandingsFunction = function () {
 
 // Saudi Arabia
 saudi = [
-    // Randeep
+    // Randeep 4
     { name: "Lewis Hamilton", quali: -1, race: 0, score: -1 },
     { name: "Fernando Alonso", quali: 5, race: 0, score: 5 },
-    // jaskaran
+    // Jaskaran 12
     { name: "Max Verstappen", quali: 8, race: 0, score: 8 },
     { name: "Lance Stroll", quali: 4, race: 0, score: 4 },
-    // Manroop
+    // Manroop 15
     { name: "Carlos Sainz", quali: 9, race: 0, score: 9 },
     { name: "Kevin Magnussen", quali: 6, race: 0, score: 6 },
-    // Charanvir
+    // Charanvir 25
     { name: "Charles Leclerc", quali: 14, race: 0, score: 14 },
     { name: "Esteban Ocon", quali: 11, race: 0, score: 11 },
-    // Joe
+    // Joe 7
     { name: "Pierre Gasly", quali: 7, race: 0, score: 7 },
     { name: "Daniel Ricciardo", quali: 0, race: 0, score: 0 },
-    // Gaganvir
+    // Gaganvir 23
     { name: "Sergio Perez", quali: 15, race: 0, score: 15 },
     { name: "Valtteri Bottas", quali: 8, race: 0, score: 8 },
-    // Gurvir
+    // Gurvir 14
     { name: "George Russel", quali: 10, race: 0, score: 10 },
     { name: "Lando Norris", quali: 4, race: 0, score: 4 }
 ];
