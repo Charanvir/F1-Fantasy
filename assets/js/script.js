@@ -1,12 +1,12 @@
 // Overall
 points = [
-    { name: "Charanvir", score: "75" },
-    { name: "Gaganvir", score: "45" },
-    { name: "Gurvir", score: "30" },
-    { name: "Jaskaran", score: "38" },
-    { name: "Joe", score: "19" },
-    { name: "Manroop", score: "56" },
-    { name: "Randeep", score: "37" }
+    { name: "Charanvir", score: "100" },
+    { name: "Gaganvir", score: "39" },
+    { name: "Gurvir", score: "58" },
+    { name: "Jaskaran", score: "66" },
+    { name: "Joe", score: "23" },
+    { name: "Manroop", score: "70" },
+    { name: "Randeep", score: "43" }
 ];
 let overallStandings = points.sort((a, b) => b.score - a.score);
 let overallBody = document.querySelector(".overallBody")
@@ -82,27 +82,27 @@ let bahrainStandingsFunction = function () {
 
 // Saudi Arabia
 saudi = [
-    // Randeep 4
-    { name: "Lewis Hamilton", quali: -1, race: 0, score: -1 },
-    { name: "Fernando Alonso", quali: 5, race: 0, score: 5 },
-    // Jaskaran 12
-    { name: "Max Verstappen", quali: 8, race: 0, score: 8 },
-    { name: "Lance Stroll", quali: 4, race: 0, score: 4 },
-    // Manroop 15
-    { name: "Carlos Sainz", quali: 9, race: 0, score: 9 },
-    { name: "Kevin Magnussen", quali: 6, race: 0, score: 6 },
-    // Charanvir 25
-    { name: "Charles Leclerc", quali: 14, race: 0, score: 14 },
-    { name: "Esteban Ocon", quali: 11, race: 0, score: 11 },
-    // Joe 7
-    { name: "Pierre Gasly", quali: 7, race: 0, score: 7 },
-    { name: "Daniel Ricciardo", quali: 0, race: 0, score: 0 },
-    // Gaganvir 23
-    { name: "Sergio Perez", quali: 15, race: 0, score: 15 },
-    { name: "Valtteri Bottas", quali: 8, race: 0, score: 8 },
-    // Gurvir 14
-    { name: "George Russel", quali: 10, race: 0, score: 10 },
-    { name: "Lando Norris", quali: 4, race: 0, score: 4 }
+    // Randeep 10
+    { name: "Lewis Hamilton", quali: -1, race: 11, score: 10 },
+    { name: "Fernando Alonso", quali: 5, race: -5, score: 0 },
+    // Jaskaran 40
+    { name: "Max Verstappen", quali: 8, race: 20, score: 28 },
+    { name: "Lance Stroll", quali: 4, race: 8, score: 12 },
+    // Manroop 29
+    { name: "Carlos Sainz", quali: 9, race: 6, score: 15 },
+    { name: "Kevin Magnussen", quali: 6, race: 8, score: 14 },
+    // Charanvir 50
+    { name: "Charles Leclerc", quali: 14, race: 18, score: 32 },
+    { name: "Esteban Ocon", quali: 11, race: 7, score: 18 },
+    // Joe 11
+    { name: "Pierre Gasly", quali: 7, race: 9, score: 16 },
+    { name: "Daniel Ricciardo", quali: 0, race: -5, score: -5 },
+    // Gaganvir 17
+    { name: "Sergio Perez", quali: 15, race: -1, score: 14 },
+    { name: "Valtteri Bottas", quali: 8, race: -5, score: 3 },
+    // Gurvir 42
+    { name: "George Russel", quali: 10, race: 12, score: 22 },
+    { name: "Lando Norris", quali: 4, race: 16, score: 20 }
 ];
 let saudiStandings = saudi.sort((a, b) => b.score - a.score);
 let saudiBody = document.querySelector(".saudiBody")
