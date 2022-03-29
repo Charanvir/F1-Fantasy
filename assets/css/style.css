@@ -33,11 +33,11 @@
 }
 
 .driverStandings td {
-    font-size: 30px;
+    font-size: 15px;
 }
 
 .driverStandings th {
-    font-size: 30px;
+    font-size: 15px;
 }
 
 .races td {
@@ -58,7 +58,7 @@
 }
 
 .driverStandings {
-    width: 90%;
+    width: 70%;
     margin: auto;
 }
 
