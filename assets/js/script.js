@@ -1,12 +1,12 @@
 // Overall
 points = [
-    { name: "Charanvir", score: "100" },
-    { name: "Gaganvir", score: "39" },
-    { name: "Gurvir", score: "58" },
-    { name: "Jaskaran", score: "66" },
-    { name: "Joe", score: "23" },
-    { name: "Manroop", score: "70" },
-    { name: "Randeep", score: "43" }
+    { name: "Charanvir", score: "123" },
+    { name: "Gaganvir", score: "52" },
+    { name: "Gurvir", score: "76" },
+    { name: "Jaskaran", score: "75" },
+    { name: "Joe", score: "32" },
+    { name: "Manroop", score: "72" },
+    { name: "Randeep", score: "56" }
 ];
 let overallStandings = points.sort((a, b) => b.score - a.score);
 let overallBody = document.querySelector(".overallBody")
@@ -31,20 +31,20 @@ let overallScores = function () {
 
 // Drivers Overall Standings
 drivers = [
-    { name: "Leclerc", quali: "29", race: "37", score: "66" },
-    { name: "Ocon", quali: "11", race: "23", score: "34" },
-    { name: "Hamilton", quali: "10", race: "27", score: "37" },
-    { name: "Alonso", quali: "13", race: "-7", score: "6" },
-    { name: "Perez", quali: "23", race: "-6", score: "17" },
-    { name: "Bottas", quali: "18", race: "4", score: "22" },
-    { name: "Verstappen", quali: "22", race: "15", score: "37" },
-    { name: "Stroll", quali: "3", race: "26", score: "29" },
-    { name: "Sainz", quali: "18", race: "15", score: "33" },
-    { name: "Gasly", quali: "13", race: "4", score: "17" },
-    { name: "Russel", quali: "13", race: "27", score: "40" },
-    { name: "Ricciardo", quali: "-1", race: "7", score: "6" },
-    { name: "Norris", quali: "8", race: "10", score: "18" },
-    { name: "Magnussen", quali: "15", race: "22", score: "37" },
+    { name: "Leclerc", quali: "44", race: "37", score: "81" },
+    { name: "Ocon", quali: "19", race: "23", score: "42" },
+    { name: "Hamilton", quali: "21", race: "27", score: "48" },
+    { name: "Alonso", quali: "15", race: "-7", score: "8" },
+    { name: "Perez", quali: "32", race: "-6", score: "26" },
+    { name: "Bottas", quali: "22", race: "4", score: "26" },
+    { name: "Verstappen", quali: "36", race: "15", score: "51" },
+    { name: "Stroll", quali: "-2", race: "26", score: "24" },
+    { name: "Sainz", quali: "21", race: "15", score: "36" },
+    { name: "Gasly", quali: "17", race: "4", score: "21" },
+    { name: "Russel", quali: "19", race: "27", score: "46" },
+    { name: "Ricciardo", quali: "4", race: "7", score: "11" },
+    { name: "Norris", quali: "20", race: "10", score: "30" },
+    { name: "Magnussen", quali: "14", race: "22", score: "36" },
 ]
 let driverStandings = drivers.sort((a, b) => b.score - a.score);
 let driverBody = document.querySelector(".driverBody");
@@ -176,55 +176,55 @@ let saudiStandingsFunction = function () {
 }
 
 // Australia
-// australia = [
-//     // Randeep 
-//     { name: "Lewis Hamilton", quali: , race: , score:  },
-//     { name: "Fernando Alonso", quali: , race: , score: },
-//     // Jaskaran 
-//     { name: "Max Verstappen", quali: , race: , score:  },
-//     { name: "Lance Stroll", quali: , race: , score:  },
-//     // Manroop 
-//     { name: "Carlos Sainz", quali: , race: , score:  },
-//     { name: "Kevin Magnussen", quali: , race: , score:  },
-//     // Charanvir 
-//     { name: "Charles Leclerc", quali: , race: , score:  },
-//     { name: "Esteban Ocon", quali: , race: , score:  },
-//     // Joe 
-//     { name: "Pierre Gasly", quali: , race: , score:  },
-//     { name: "Daniel Ricciardo", quali: , race: , score:  },
-//     // Gaganvir 
-//     { name: "Sergio Perez", quali: , race: , score:  },
-//     { name: "Valtteri Bottas", quali: , race: , score:  },
-//     // Gurvir 
-//     { name: "George Russel", quali: , race: , score:  },
-//     { name: "Lando Norris", quali: , race: , score:  }
-// ];
-// let australiaStandings = australia.sort((a, b) => b.score - a.score);
-// let australiaBody = document.querySelector(".australiaBody")
-// let australiaStandingsFunction = function () {
-//     counter = 0;
-//     for (i = 0; i < australiaStandings.length; i++) {
-//         counter++
-//         let row = document.createElement("tr")
-//         let header = document.createElement("th");
-//         let teamName = document.createElement("td");
-//         let qualiScore = document.createElement("td");
-//         let raceScore = document.createElement("td");
-//         let teamScore = document.createElement("td");
-//         teamName.innerHTML = australiaStandings[i].name
-//         qualiScore.innerHTML = australiaStandings[i].quali
-//         raceScore.innerHTML = australiaStandings[i].race
-//         teamScore.innerHTML = australiaStandings[i].score
-//         header.setAttribute("scope", "row");
-//         header.innerHTML = counter;
-//         row.appendChild(header);
-//         row.appendChild(teamName);
-//         row.appendChild(qualiScore);
-//         row.appendChild(raceScore);
-//         row.appendChild(teamScore);
-//         australiaBody.appendChild(row);
-//     }
-// }
+australia = [
+    // Randeep 13
+    { name: "Lewis Hamilton", quali: 11, race: 0, score: 11 },
+    { name: "Fernando Alonso", quali: 2, race: 0, score: 2 },
+    // Jaskaran 9
+    { name: "Max Verstappen", quali: 14, race: 0, score: 14 },
+    { name: "Lance Stroll", quali: -5, race: 0, score: -5 },
+    // Manroop  2
+    { name: "Carlos Sainz", quali: 3, race: 0, score: 3 },
+    { name: "Kevin Magnussen", quali: -1, race: 0, score: -1 },
+    // Charanvir 23
+    { name: "Charles Leclerc", quali: 15, race: 0, score: 15 },
+    { name: "Esteban Ocon", quali: 8, race: 0, score: 8 },
+    // Joe 9
+    { name: "Pierre Gasly", quali: 4, race: 0, score: 4 },
+    { name: "Daniel Ricciardo", quali: 5, race: 0, score: 5 },
+    // Gaganvir 13
+    { name: "Sergio Perez", quali: 9, race: 0, score: 9 },
+    { name: "Valtteri Bottas", quali: 4, race: 0, score: 4 },
+    // Gurvir 18
+    { name: "George Russel", quali: 6, race: 0, score: 6 },
+    { name: "Lando Norris", quali: 12, race: 0, score: 12 }
+];
+let australiaStandings = australia.sort((a, b) => b.score - a.score);
+let australiaBody = document.querySelector(".australiaBody")
+let australiaStandingsFunction = function () {
+    counter = 0;
+    for (i = 0; i < australiaStandings.length; i++) {
+        counter++
+        let row = document.createElement("tr")
+        let header = document.createElement("th");
+        let teamName = document.createElement("td");
+        let qualiScore = document.createElement("td");
+        let raceScore = document.createElement("td");
+        let teamScore = document.createElement("td");
+        teamName.innerHTML = australiaStandings[i].name
+        qualiScore.innerHTML = australiaStandings[i].quali
+        raceScore.innerHTML = australiaStandings[i].race
+        teamScore.innerHTML = australiaStandings[i].score
+        header.setAttribute("scope", "row");
+        header.innerHTML = counter;
+        row.appendChild(header);
+        row.appendChild(teamName);
+        row.appendChild(qualiScore);
+        row.appendChild(raceScore);
+        row.appendChild(teamScore);
+        australiaBody.appendChild(row);
+    }
+}
 
 
 
@@ -232,4 +232,4 @@ overallScores();
 driverScores();
 bahrainStandingsFunction();
 saudiStandingsFunction();
-// australiaStandingsFunction();
+australiaStandingsFunction();
