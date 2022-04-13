@@ -82,7 +82,7 @@ let driverScores = function () {
     }
 }
 
-// Bahrain
+// Bahrain Standings
 bahrain = [
     // Randeep 33
     { name: "Lewis Hamilton", quali: 11, race: 16, score: 27 },
@@ -133,7 +133,7 @@ let bahrainStandingsFunction = function () {
     }
 }
 
-// Saudi Arabia
+// Saudi Arabia Standings
 saudi = [
     // Randeep 10
     { name: "Lewis Hamilton", quali: -1, race: 11, score: 10 },
@@ -184,7 +184,7 @@ let saudiStandingsFunction = function () {
     }
 }
 
-// Australia
+// Australia Standings
 australia = [
     // Randeep 4
     { name: "Lewis Hamilton", quali: 11, race: 7, score: 18 },
