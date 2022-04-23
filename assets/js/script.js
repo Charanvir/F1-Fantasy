@@ -1,90 +1,3 @@
-// Overall
-points = [
-    { name: "Charanvir", score: "165" },
-    { name: "Gaganvir", score: "96" },
-    { name: "Gurvir", score: "119" },
-    { name: "Jaskaran", score: "103" },
-    { name: "Joe", score: "52" },
-    { name: "Manroop", score: "83" },
-    { name: "Randeep", score: "58" }
-];
-let overallStandings = points.sort((a, b) => b.score - a.score);
-let overallBody = document.querySelector(".overallBody")
-let overallScores = function () {
-    counter = 0;
-    for (i = 0; i < overallStandings.length; i++) {
-        counter++
-        let row = document.createElement("tr")
-        let header = document.createElement("th");
-        let teamName = document.createElement("td");
-        let teamScore = document.createElement("td");
-        teamName.innerHTML = overallStandings[i].name
-        teamScore.innerHTML = overallStandings[i].score
-        header.setAttribute("scope", "row");
-        header.innerHTML = counter;
-        row.appendChild(header);
-        row.appendChild(teamName);
-        row.appendChild(teamScore);
-        overallBody.appendChild(row);
-    }
-};
-
-// Drivers Overall Standings
-drivers = [
-    // Charanvir
-    { name: "Leclerc", quali: "58", sprint: "0", race: "56", score: "114" },
-    { name: "Ocon", quali: "18", sprint: "0", race: "33", score: "51" },
-    // Randeep
-    { name: "Hamilton", quali: "21", sprint: "0", race: "34", score: "55" },
-    { name: "Alonso", quali: "26", sprint: "0", race: "-23", score: "3" },
-    // Gaganvir
-    { name: "Perez", quali: "38", sprint: "0", race: "9", score: "47" },
-    { name: "Bottas", quali: "30", sprint: "0", race: "19", score: "49" },
-    // Jaskaran
-    { name: "Verstappen", quali: "51", sprint: "0", race: "10", score: "61" },
-    { name: "Stroll", quali: "-2", sprint: "0", race: "44", score: "42" },
-    // Manroop
-    { name: "Sainz", quali: "23", sprint: "0", race: "10", score: "33" },
-    { name: "Magnussen", quali: "26", sprint: "0", race: "24", score: "50" },
-    // Joe
-    { name: "Gasly", quali: "16", sprint: "0", race: "14", score: "30" },
-    { name: "Ricciardo", quali: "10", sprint: "0", race: "12", score: "22" },
-    // Gurvir
-    { name: "Norris", quali: "33", sprint: "0", race: "18", score: "51" },
-    { name: "Russel", quali: "23", sprint: "0", race: "45", score: "68" },
-
-
-]
-let driverStandings = drivers.sort((a, b) => b.score - a.score);
-let driverBody = document.querySelector(".driverBody");
-let driverScores = function () {
-    counter = 0;
-    for (i = 0; i < driverStandings.length; i++) {
-        counter++
-        let row = document.createElement("tr")
-        let header = document.createElement("th");
-        let teamName = document.createElement("td");
-        let qualiScore = document.createElement("td");
-        let sprintScore = document.createElement("td");
-        let raceScore = document.createElement("td");
-        let teamScore = document.createElement("td");
-        teamName.innerHTML = driverStandings[i].name
-        qualiScore.innerHTML = driverStandings[i].quali
-        sprintScore.innerHTML = driverStandings[i].sprint
-        raceScore.innerHTML = driverStandings[i].race
-        teamScore.innerHTML = driverStandings[i].score
-        header.setAttribute("scope", "row");
-        header.innerHTML = counter;
-        row.appendChild(header);
-        row.appendChild(teamName);
-        row.appendChild(qualiScore);
-        row.appendChild(sprintScore);
-        row.appendChild(raceScore);
-        row.appendChild(teamScore);
-        driverBody.appendChild(row);
-    }
-}
-
 // Bahrain Standings
 bahrain = [
     // Randeep 33
@@ -241,26 +154,26 @@ let australiaStandingsFunction = function () {
 // Imola Standings
 imola = [
     // Randeep  11
-    { name: "Lewis Hamilton", quali: 0, sprint: 0, race: 0, score: 0 },
-    { name: "Fernando Alonso", quali: 11, sprint: 0, race: 0, score: 11 },
+    { name: "Lewis Hamilton", quali: 0, sprint: -4, race: 0, score: -4 },
+    { name: "Fernando Alonso", quali: 11, sprint: -4, race: 0, score: 7 },
     // Jaskaran 
-    { name: "Max Verstappen", quali: 15, sprint: 0, race: 0, score: 15 },
-    { name: "Lance Stroll", quali: 0, sprint: 0, race: 0, score: 0 },
+    { name: "Max Verstappen", quali: 15, sprint: 9, race: 0, score: 24 },
+    { name: "Lance Stroll", quali: 0, sprint: -2, race: 0, score: -2 },
     // Manroop 
-    { name: "Carlos Sainz", quali: 2, sprint: 0, race: 0, score: 2 },
-    { name: "Kevin Magnussen", quali: 12, sprint: 0, race: 0, score: 12 },
+    { name: "Carlos Sainz", quali: 2, sprint: 12, race: 0, score: 14 },
+    { name: "Kevin Magnussen", quali: 12, sprint: -4, race: 0, score: 8 },
     // Charanvir 
-    { name: "Charles Leclerc", quali: 14, sprint: 0, race: 0, score: 14 },
-    { name: "Esteban Ocon", quali: -1, sprint: 0, race: 0, score: -1 },
+    { name: "Charles Leclerc", quali: 14, sprint: 8, race: 0, score: 22 },
+    { name: "Esteban Ocon", quali: -1, sprint: 4, race: 0, score: 3 },
     // Joe 
-    { name: "Pierre Gasly", quali: -1, sprint: 0, race: 0, score: -1 },
-    { name: "Daniel Ricciardo", quali: 6, sprint: 0, race: 0, score: 6 },
+    { name: "Pierre Gasly", quali: -1, sprint: -2, race: 0, score: -3 },
+    { name: "Daniel Ricciardo", quali: 6, sprint: -2, race: 0, score: 4 },
     // Gaganvir 
-    { name: "Sergio Perez", quali: 5, sprint: 0, race: 0, score: 5 },
-    { name: "Valtteri Bottas", quali: 8, sprint: 0, race: 0, score: 8 },
+    { name: "Sergio Perez", quali: 5, sprint: 9, race: 0, score: 14 },
+    { name: "Valtteri Bottas", quali: 8, sprint: 6, race: 0, score: 14 },
     // Gurvir 
-    { name: "George Russel", quali: 4, sprint: 0, race: 0, score: 4 },
-    { name: "Lando Norris", quali: 13, sprint: 0, race: 0, score: 13 }
+    { name: "George Russel", quali: 4, sprint: 4, race: 0, score: 8 },
+    { name: "Lando Norris", quali: 13, sprint: 1, race: 0, score: 14 }
 ];
 let imolaStandings = imola.sort((a, b) => b.score - a.score);
 let imolaBody = document.querySelector(".imolaBody")
@@ -291,6 +204,176 @@ let imolaStandingsFunction = function () {
         imolaBody.appendChild(row);
     }
 }
+
+// Drivers Overall Standings
+drivers = [
+    // Charanvir
+    {
+        name: "Leclerc",
+        quali: bahrain.find(x => x.name === "Charles Leclerc").quali + saudi.find(x => x.name === "Charles Leclerc").quali + australia.find(x => x.name === "Charles Leclerc").quali + imola.find(x => x.name === "Charles Leclerc").quali,
+        sprint: imola.find(x => x.name === "Charles Leclerc").sprint,
+        race: bahrain.find(x => x.name === "Charles Leclerc").race + saudi.find(x => x.name === "Charles Leclerc").race + australia.find(x => x.name === "Charles Leclerc").race + imola.find(x => x.name === "Charles Leclerc").race,
+        score: bahrain.find(x => x.name === "Charles Leclerc").score + saudi.find(x => x.name === "Charles Leclerc").score + australia.find(x => x.name === "Charles Leclerc").score + imola.find(x => x.name === "Charles Leclerc").score
+    },
+    {
+        name: "Ocon",
+        quali: bahrain.find(x => x.name === "Esteban Ocon").quali + saudi.find(x => x.name === "Esteban Ocon").quali + australia.find(x => x.name === "Esteban Ocon").quali + imola.find(x => x.name === "Esteban Ocon").quali,
+        sprint: imola.find(x => x.name === "Esteban Ocon").sprint,
+        race: bahrain.find(x => x.name === "Esteban Ocon").race + saudi.find(x => x.name === "Esteban Ocon").race + australia.find(x => x.name === "Esteban Ocon").race + imola.find(x => x.name === "Esteban Ocon").race,
+        score: bahrain.find(x => x.name === "Esteban Ocon").score + saudi.find(x => x.name === "Esteban Ocon").score + australia.find(x => x.name === "Esteban Ocon").score + imola.find(x => x.name === "Esteban Ocon").score
+    },
+    // Randeep
+    {
+        name: "Hamilton",
+        quali: bahrain.find(x => x.name === "Lewis Hamilton").quali + saudi.find(x => x.name === "Lewis Hamilton").quali + australia.find(x => x.name === "Lewis Hamilton").quali + imola.find(x => x.name === "Lewis Hamilton").quali,
+        sprint: imola.find(x => x.name === "Lewis Hamilton").sprint,
+        race: bahrain.find(x => x.name === "Lewis Hamilton").race + saudi.find(x => x.name === "Lewis Hamilton").race + australia.find(x => x.name === "Lewis Hamilton").race + imola.find(x => x.name === "Lewis Hamilton").race,
+        score: bahrain.find(x => x.name === "Lewis Hamilton").score + saudi.find(x => x.name === "Lewis Hamilton").score + australia.find(x => x.name === "Lewis Hamilton").score + imola.find(x => x.name === "Lewis Hamilton").score
+    },
+    {
+        name: "Alonso",
+        quali: bahrain.find(x => x.name === "Fernando Alonso").quali + saudi.find(x => x.name === "Fernando Alonso").quali + australia.find(x => x.name === "Fernando Alonso").quali + imola.find(x => x.name === "Fernando Alonso").quali,
+        sprint: imola.find(x => x.name === "Fernando Alonso").sprint,
+        race: bahrain.find(x => x.name === "Fernando Alonso").race + saudi.find(x => x.name === "Fernando Alonso").race + australia.find(x => x.name === "Fernando Alonso").race + imola.find(x => x.name === "Fernando Alonso").race,
+        score: bahrain.find(x => x.name === "Fernando Alonso").score + saudi.find(x => x.name === "Fernando Alonso").score + australia.find(x => x.name === "Fernando Alonso").score + imola.find(x => x.name === "Fernando Alonso").score
+    },
+    // Gaganvir
+    {
+        name: "Perez",
+        quali: bahrain.find(x => x.name === "Sergio Perez").quali + saudi.find(x => x.name === "Sergio Perez").quali + australia.find(x => x.name === "Sergio Perez").quali + imola.find(x => x.name === "Sergio Perez").quali,
+        sprint: imola.find(x => x.name === "Sergio Perez").sprint,
+        race: bahrain.find(x => x.name === "Sergio Perez").race + saudi.find(x => x.name === "Sergio Perez").race + australia.find(x => x.name === "Sergio Perez").race + imola.find(x => x.name === "Sergio Perez").race,
+        score: bahrain.find(x => x.name === "Sergio Perez").score + saudi.find(x => x.name === "Sergio Perez").score + australia.find(x => x.name === "Sergio Perez").score + imola.find(x => x.name === "Sergio Perez").score
+    },
+    {
+        name: "Bottas",
+        quali: bahrain.find(x => x.name === "Valtteri Bottas").quali + saudi.find(x => x.name === "Valtteri Bottas").quali + australia.find(x => x.name === "Valtteri Bottas").quali + imola.find(x => x.name === "Valtteri Bottas").quali,
+        sprint: imola.find(x => x.name === "Valtteri Bottas").sprint,
+        race: bahrain.find(x => x.name === "Valtteri Bottas").race + saudi.find(x => x.name === "Valtteri Bottas").race + australia.find(x => x.name === "Valtteri Bottas").race + imola.find(x => x.name === "Valtteri Bottas").race,
+        score: bahrain.find(x => x.name === "Valtteri Bottas").score + saudi.find(x => x.name === "Valtteri Bottas").score + australia.find(x => x.name === "Valtteri Bottas").score + imola.find(x => x.name === "Valtteri Bottas").score
+    },
+    // Jaskaran
+    {
+        name: "Verstappen",
+        quali: bahrain.find(x => x.name === "Max Verstappen").quali + saudi.find(x => x.name === "Max Verstappen").quali + australia.find(x => x.name === "Max Verstappen").quali + imola.find(x => x.name === "Max Verstappen").quali,
+        sprint: imola.find(x => x.name === "Max Verstappen").sprint,
+        race: bahrain.find(x => x.name === "Max Verstappen").race + saudi.find(x => x.name === "Max Verstappen").race + australia.find(x => x.name === "Max Verstappen").race + imola.find(x => x.name === "Max Verstappen").race,
+        score: bahrain.find(x => x.name === "Max Verstappen").score + saudi.find(x => x.name === "Max Verstappen").score + australia.find(x => x.name === "Max Verstappen").score + imola.find(x => x.name === "Max Verstappen").score
+    },
+    {
+        name: "Stroll",
+        quali: bahrain.find(x => x.name === "Lance Stroll").quali + saudi.find(x => x.name === "Lance Stroll").quali + australia.find(x => x.name === "Lance Stroll").quali + imola.find(x => x.name === "Lance Stroll").quali,
+        sprint: imola.find(x => x.name === "Lance Stroll").sprint,
+        race: bahrain.find(x => x.name === "Lance Stroll").race + saudi.find(x => x.name === "Lance Stroll").race + australia.find(x => x.name === "Lance Stroll").race + imola.find(x => x.name === "Lance Stroll").race,
+        score: bahrain.find(x => x.name === "Lance Stroll").score + saudi.find(x => x.name === "Lance Stroll").score + australia.find(x => x.name === "Lance Stroll").score + imola.find(x => x.name === "Lance Stroll").score
+    },
+    // Manroop
+    {
+        name: "Sainz",
+        quali: bahrain.find(x => x.name === "Carlos Sainz").quali + saudi.find(x => x.name === "Carlos Sainz").quali + australia.find(x => x.name === "Carlos Sainz").quali + imola.find(x => x.name === "Carlos Sainz").quali,
+        sprint: imola.find(x => x.name === "Carlos Sainz").sprint,
+        race: bahrain.find(x => x.name === "Carlos Sainz").race + saudi.find(x => x.name === "Carlos Sainz").race + australia.find(x => x.name === "Carlos Sainz").race + imola.find(x => x.name === "Carlos Sainz").race,
+        score: bahrain.find(x => x.name === "Carlos Sainz").score + saudi.find(x => x.name === "Carlos Sainz").score + australia.find(x => x.name === "Carlos Sainz").score + imola.find(x => x.name === "Carlos Sainz").score
+    },
+    {
+        name: "Magnussen",
+        quali: bahrain.find(x => x.name === "Kevin Magnussen").quali + saudi.find(x => x.name === "Kevin Magnussen").quali + australia.find(x => x.name === "Kevin Magnussen").quali + imola.find(x => x.name === "Kevin Magnussen").quali,
+        sprint: imola.find(x => x.name === "Kevin Magnussen").sprint,
+        race: bahrain.find(x => x.name === "Kevin Magnussen").race + saudi.find(x => x.name === "Kevin Magnussen").race + australia.find(x => x.name === "Kevin Magnussen").race + imola.find(x => x.name === "Kevin Magnussen").race,
+        score: bahrain.find(x => x.name === "Kevin Magnussen").score + saudi.find(x => x.name === "Kevin Magnussen").score + australia.find(x => x.name === "Kevin Magnussen").score + imola.find(x => x.name === "Kevin Magnussen").score
+    },
+    // Joe
+    {
+        name: "Gasly",
+        quali: bahrain.find(x => x.name === "Pierre Gasly").quali + saudi.find(x => x.name === "Pierre Gasly").quali + australia.find(x => x.name === "Pierre Gasly").quali + imola.find(x => x.name === "Pierre Gasly").quali,
+        sprint: imola.find(x => x.name === "Pierre Gasly").sprint,
+        race: bahrain.find(x => x.name === "Pierre Gasly").race + saudi.find(x => x.name === "Pierre Gasly").race + australia.find(x => x.name === "Pierre Gasly").race + imola.find(x => x.name === "Pierre Gasly").race,
+        score: bahrain.find(x => x.name === "Pierre Gasly").score + saudi.find(x => x.name === "Pierre Gasly").score + australia.find(x => x.name === "Pierre Gasly").score + imola.find(x => x.name === "Pierre Gasly").score
+    },
+    {
+        name: "Ricciardo",
+        quali: bahrain.find(x => x.name === "Daniel Ricciardo").quali + saudi.find(x => x.name === "Daniel Ricciardo").quali + australia.find(x => x.name === "Daniel Ricciardo").quali + imola.find(x => x.name === "Daniel Ricciardo").quali,
+        sprint: imola.find(x => x.name === "Daniel Ricciardo").sprint,
+        race: bahrain.find(x => x.name === "Daniel Ricciardo").race + saudi.find(x => x.name === "Daniel Ricciardo").race + australia.find(x => x.name === "Daniel Ricciardo").race + imola.find(x => x.name === "Daniel Ricciardo").race,
+        score: bahrain.find(x => x.name === "Daniel Ricciardo").score + saudi.find(x => x.name === "Daniel Ricciardo").score + australia.find(x => x.name === "Daniel Ricciardo").score + imola.find(x => x.name === "Daniel Ricciardo").score
+    },
+    // Gurvir
+    {
+        name: "Norris",
+        quali: bahrain.find(x => x.name === "Lando Norris").quali + saudi.find(x => x.name === "Lando Norris").quali + australia.find(x => x.name === "Lando Norris").quali + imola.find(x => x.name === "Lando Norris").quali,
+        sprint: imola.find(x => x.name === "Lando Norris").sprint,
+        race: bahrain.find(x => x.name === "Lando Norris").race + saudi.find(x => x.name === "Lando Norris").race + australia.find(x => x.name === "Lando Norris").race + imola.find(x => x.name === "Lando Norris").race,
+        score: bahrain.find(x => x.name === "Lando Norris").score + saudi.find(x => x.name === "Lando Norris").score + australia.find(x => x.name === "Lando Norris").score + imola.find(x => x.name === "Lando Norris").score
+    },
+    {
+        name: "Russel",
+        quali: bahrain.find(x => x.name === "George Russel").quali + saudi.find(x => x.name === "George Russel").quali + australia.find(x => x.name === "George Russel").quali + imola.find(x => x.name === "George Russel").quali,
+        sprint: imola.find(x => x.name === "George Russel").sprint,
+        race: bahrain.find(x => x.name === "George Russel").race + saudi.find(x => x.name === "George Russel").race + australia.find(x => x.name === "George Russel").race + imola.find(x => x.name === "George Russel").race,
+        score: bahrain.find(x => x.name === "George Russel").score + saudi.find(x => x.name === "George Russel").score + australia.find(x => x.name === "George Russel").score + imola.find(x => x.name === "George Russel").score
+    },
+]
+let driverStandings = drivers.sort((a, b) => b.score - a.score);
+let driverBody = document.querySelector(".driverBody");
+let driverScores = function () {
+    counter = 0;
+    for (i = 0; i < driverStandings.length; i++) {
+        counter++
+        let row = document.createElement("tr")
+        let header = document.createElement("th");
+        let teamName = document.createElement("td");
+        let qualiScore = document.createElement("td");
+        let sprintScore = document.createElement("td");
+        let raceScore = document.createElement("td");
+        let teamScore = document.createElement("td");
+        teamName.innerHTML = driverStandings[i].name
+        qualiScore.innerHTML = driverStandings[i].quali
+        sprintScore.innerHTML = driverStandings[i].sprint
+        raceScore.innerHTML = driverStandings[i].race
+        teamScore.innerHTML = driverStandings[i].score
+        header.setAttribute("scope", "row");
+        header.innerHTML = counter;
+        row.appendChild(header);
+        row.appendChild(teamName);
+        row.appendChild(qualiScore);
+        row.appendChild(sprintScore);
+        row.appendChild(raceScore);
+        row.appendChild(teamScore);
+        driverBody.appendChild(row);
+    }
+}
+
+// Overall
+points = [
+    { name: "Charanvir", score: drivers.find(x => x.name === "Leclerc").score + drivers.find(x => x.name === "Ocon").score },
+    { name: "Gaganvir", score: drivers.find(x => x.name === "Perez").score + drivers.find(x => x.name === "Bottas").score },
+    { name: "Gurvir", score: drivers.find(x => x.name === "Norris").score + drivers.find(x => x.name === "Russel").score },
+    { name: "Jaskaran", score: drivers.find(x => x.name === "Verstappen").score + drivers.find(x => x.name === "Stroll").score },
+    { name: "Joe", score: drivers.find(x => x.name === "Gasly").score + drivers.find(x => x.name === "Ricciardo").score },
+    { name: "Manroop", score: drivers.find(x => x.name === "Sainz").score + drivers.find(x => x.name === "Magnussen").score },
+    { name: "Randeep", score: drivers.find(x => x.name === "Hamilton").score + drivers.find(x => x.name === "Alonso").score }
+];
+let overallStandings = points.sort((a, b) => b.score - a.score);
+let overallBody = document.querySelector(".overallBody")
+let overallScores = function () {
+    counter = 0;
+    for (i = 0; i < overallStandings.length; i++) {
+        counter++
+        let row = document.createElement("tr")
+        let header = document.createElement("th");
+        let teamName = document.createElement("td");
+        let teamScore = document.createElement("td");
+        teamName.innerHTML = overallStandings[i].name
+        teamScore.innerHTML = overallStandings[i].score
+        header.setAttribute("scope", "row");
+        header.innerHTML = counter;
+        row.appendChild(header);
+        row.appendChild(teamName);
+        row.appendChild(teamScore);
+        overallBody.appendChild(row);
+    }
+};
+
 
 
 
