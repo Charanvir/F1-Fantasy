@@ -169,7 +169,7 @@ imola = [
     { name: "Pierre Gasly", quali: -1, sprint: -2, race: 0, score: -3 },
     { name: "Daniel Ricciardo", quali: 6, sprint: -2, race: 0, score: 4 },
     // Gaganvir 
-    { name: "Sergio Perez", quali: 5, sprint: 9, race: 0, score: 14 },
+    { name: "Sergio Perez", quali: 5, sprint: 14, race: 0, score: 19 },
     { name: "Valtteri Bottas", quali: 8, sprint: 6, race: 0, score: 14 },
     // Gurvir 
     { name: "George Russel", quali: 4, sprint: 4, race: 0, score: 8 },
