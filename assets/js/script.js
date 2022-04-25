@@ -155,25 +155,25 @@ let australiaStandingsFunction = function () {
 imola = [
     // Randeep  11
     { name: "Lewis Hamilton", quali: 0, sprint: -4, race: 0, score: -4 },
-    { name: "Fernando Alonso", quali: 11, sprint: -4, race: 0, score: 7 },
+    { name: "Fernando Alonso", quali: 11, sprint: -4, race: -5, score: 2 },
     // Jaskaran 
-    { name: "Max Verstappen", quali: 15, sprint: 9, race: 0, score: 24 },
-    { name: "Lance Stroll", quali: 0, sprint: -2, race: 0, score: -2 },
+    { name: "Max Verstappen", quali: 15, sprint: 9, race: 19, score: 43 },
+    { name: "Lance Stroll", quali: 0, sprint: -2, race: 9, score: 7 },
     // Manroop 
-    { name: "Carlos Sainz", quali: 2, sprint: 12, race: 0, score: 14 },
-    { name: "Kevin Magnussen", quali: 12, sprint: -4, race: 0, score: 8 },
+    { name: "Carlos Sainz", quali: 2, sprint: 12, race: -5, score: 9 },
+    { name: "Kevin Magnussen", quali: 12, sprint: -4, race: 4, score: 12 },
     // Charanvir 
-    { name: "Charles Leclerc", quali: 14, sprint: 8, race: 0, score: 22 },
-    { name: "Esteban Ocon", quali: -1, sprint: 4, race: 0, score: 3 },
+    { name: "Charles Leclerc", quali: 14, sprint: 8, race: 1, score: 23 },
+    { name: "Esteban Ocon", quali: -1, sprint: 4, race: 8, score: 11 },
     // Joe 
-    { name: "Pierre Gasly", quali: -1, sprint: -2, race: 0, score: -3 },
-    { name: "Daniel Ricciardo", quali: 6, sprint: -2, race: 0, score: 4 },
+    { name: "Pierre Gasly", quali: -1, sprint: -2, race: 8, score: 5 },
+    { name: "Daniel Ricciardo", quali: 6, sprint: -2, race: -26, score: -22 },
     // Gaganvir 
-    { name: "Sergio Perez", quali: 5, sprint: 14, race: 0, score: 19 },
-    { name: "Valtteri Bottas", quali: 8, sprint: 6, race: 0, score: 14 },
+    { name: "Sergio Perez", quali: 5, sprint: 14, race: 9, score: 28 },
+    { name: "Valtteri Bottas", quali: 8, sprint: 6, race: 14, score: 28 },
     // Gurvir 
-    { name: "George Russel", quali: 4, sprint: 4, race: 0, score: 8 },
-    { name: "Lando Norris", quali: 13, sprint: 1, race: 0, score: 14 }
+    { name: "George Russel", quali: 4, sprint: 4, race: 25, score: 33 },
+    { name: "Lando Norris", quali: 13, sprint: 1, race: 16, score: 30 }
 ];
 let imolaStandings = imola.sort((a, b) => b.score - a.score);
 let imolaBody = document.querySelector(".imolaBody")
