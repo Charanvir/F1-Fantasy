@@ -256,112 +256,163 @@ let miamiStandingsFunction = function () {
     }
 }
 
+// Spain Standings
+spain = [
+    // Randeep 
+    { name: "Lewis Hamilton", quali: 6, race: 6, score: 12 },
+    { name: "Fernando Alonso", quali: -1, race: 16, score: 15 },
+    // Jaskaran 
+    { name: "Max Verstappen", quali: 14, race: 16, score: 30 },
+    { name: "Lance Stroll", quali: -1, race: 4, score: 3 },
+    // Manroop 
+    { name: "Carlos Sainz", quali: 9, race: 3, score: 12 },
+    { name: "Kevin Magnussen", quali: 8, race: -24, score: -16 },
+    // Charanvir 
+    { name: "Charles Leclerc", quali: 15, race: -5, score: 10 },
+    { name: "Esteban Ocon", quali: 4, race: 18, score: 22 },
+    // Joe 
+    { name: "Pierre Gasly", quali: 0, race: 0, score: 0 },
+    { name: "Daniel Ricciardo", quali: 7, race: -8, score: -1 },
+    // Gaganvir 
+    { name: "Sergio Perez", quali: 7, race: 18, score: 25 },
+    { name: "Valtteri Bottas", quali: 9, race: 11, score: 20 },
+    // Gurvir 
+    { name: "George Russel", quali: 12, race: 14, score: 26 },
+    { name: "Lando Norris", quali: 0, race: 13, score: 13 }
+];
+let spainStandings = spain.sort((a, b) => b.score - a.score);
+let spainBody = document.querySelector(".spainBody")
+let spainStandingsFunction = function () {
+    counter = 0;
+    for (i = 0; i < spainStandings.length; i++) {
+        counter++
+        let row = document.createElement("tr")
+        let header = document.createElement("th");
+        let teamName = document.createElement("td");
+        let qualiScore = document.createElement("td");
+        let raceScore = document.createElement("td");
+        let teamScore = document.createElement("td");
+        teamName.innerHTML = spainStandings[i].name
+        qualiScore.innerHTML = spainStandings[i].quali
+        raceScore.innerHTML = spainStandings[i].race
+        teamScore.innerHTML = spainStandings[i].score
+        header.setAttribute("scope", "row");
+        header.innerHTML = counter;
+        row.appendChild(header);
+        row.appendChild(teamName);
+        row.appendChild(qualiScore);
+        row.appendChild(raceScore);
+        row.appendChild(teamScore);
+        spainBody.appendChild(row);
+    }
+}
+
 // Drivers Overall Standings
 drivers = [
     // Charanvir
     {
         name: "Leclerc",
-        quali: bahrain.find(x => x.name === "Charles Leclerc").quali + saudi.find(x => x.name === "Charles Leclerc").quali + australia.find(x => x.name === "Charles Leclerc").quali + imola.find(x => x.name === "Charles Leclerc").quali + miami.find(x => x.name === "Charles Leclerc").quali,
+        quali: bahrain.find(x => x.name === "Charles Leclerc").quali + saudi.find(x => x.name === "Charles Leclerc").quali + australia.find(x => x.name === "Charles Leclerc").quali + imola.find(x => x.name === "Charles Leclerc").quali + miami.find(x => x.name === "Charles Leclerc").quali + spain.find(x => x.name === "Charles Leclerc").quali,
         sprint: imola.find(x => x.name === "Charles Leclerc").sprint,
-        race: bahrain.find(x => x.name === "Charles Leclerc").race + saudi.find(x => x.name === "Charles Leclerc").race + australia.find(x => x.name === "Charles Leclerc").race + imola.find(x => x.name === "Charles Leclerc").race + miami.find(x => x.name === "Charles Leclerc").race,
-        score: bahrain.find(x => x.name === "Charles Leclerc").score + saudi.find(x => x.name === "Charles Leclerc").score + australia.find(x => x.name === "Charles Leclerc").score + imola.find(x => x.name === "Charles Leclerc").score + miami.find(x => x.name === "Charles Leclerc").score
+        race: bahrain.find(x => x.name === "Charles Leclerc").race + saudi.find(x => x.name === "Charles Leclerc").race + australia.find(x => x.name === "Charles Leclerc").race + imola.find(x => x.name === "Charles Leclerc").race + miami.find(x => x.name === "Charles Leclerc").race + spain.find(x => x.name === "Charles Leclerc").race,
+        score: bahrain.find(x => x.name === "Charles Leclerc").score + saudi.find(x => x.name === "Charles Leclerc").score + australia.find(x => x.name === "Charles Leclerc").score + imola.find(x => x.name === "Charles Leclerc").score + miami.find(x => x.name === "Charles Leclerc").score + spain.find(x => x.name === "Charles Leclerc").score
     },
     {
         name: "Ocon",
-        quali: bahrain.find(x => x.name === "Esteban Ocon").quali + saudi.find(x => x.name === "Esteban Ocon").quali + australia.find(x => x.name === "Esteban Ocon").quali + imola.find(x => x.name === "Esteban Ocon").quali + miami.find(x => x.name === "Esteban Ocon").quali,
+        quali: bahrain.find(x => x.name === "Esteban Ocon").quali + saudi.find(x => x.name === "Esteban Ocon").quali + australia.find(x => x.name === "Esteban Ocon").quali + imola.find(x => x.name === "Esteban Ocon").quali + miami.find(x => x.name === "Esteban Ocon").quali + spain.find(x => x.name === "Esteban Ocon").quali,
         sprint: imola.find(x => x.name === "Esteban Ocon").sprint,
-        race: bahrain.find(x => x.name === "Esteban Ocon").race + saudi.find(x => x.name === "Esteban Ocon").race + australia.find(x => x.name === "Esteban Ocon").race + imola.find(x => x.name === "Esteban Ocon").race + miami.find(x => x.name === "Esteban Ocon").race,
-        score: bahrain.find(x => x.name === "Esteban Ocon").score + saudi.find(x => x.name === "Esteban Ocon").score + australia.find(x => x.name === "Esteban Ocon").score + imola.find(x => x.name === "Esteban Ocon").score + miami.find(x => x.name === "Esteban Ocon").score
+        race: bahrain.find(x => x.name === "Esteban Ocon").race + saudi.find(x => x.name === "Esteban Ocon").race + australia.find(x => x.name === "Esteban Ocon").race + imola.find(x => x.name === "Esteban Ocon").race + miami.find(x => x.name === "Esteban Ocon").race + spain.find(x => x.name === "Esteban Ocon").race,
+        score: bahrain.find(x => x.name === "Esteban Ocon").score + saudi.find(x => x.name === "Esteban Ocon").score + australia.find(x => x.name === "Esteban Ocon").score + imola.find(x => x.name === "Esteban Ocon").score + miami.find(x => x.name === "Esteban Ocon").score + spain.find(x => x.name === "Esteban Ocon").score
     },
     // Randeep
     {
         name: "Hamilton",
-        quali: bahrain.find(x => x.name === "Lewis Hamilton").quali + saudi.find(x => x.name === "Lewis Hamilton").quali + australia.find(x => x.name === "Lewis Hamilton").quali + imola.find(x => x.name === "Lewis Hamilton").quali + miami.find(x => x.name === "Lewis Hamilton").quali,
+        quali: bahrain.find(x => x.name === "Lewis Hamilton").quali + saudi.find(x => x.name === "Lewis Hamilton").quali + australia.find(x => x.name === "Lewis Hamilton").quali + imola.find(x => x.name === "Lewis Hamilton").quali + miami.find(x => x.name === "Lewis Hamilton").quali + spain.find(x => x.name === "Lewis Hamilton").quali,
         sprint: imola.find(x => x.name === "Lewis Hamilton").sprint,
-        race: bahrain.find(x => x.name === "Lewis Hamilton").race + saudi.find(x => x.name === "Lewis Hamilton").race + australia.find(x => x.name === "Lewis Hamilton").race + imola.find(x => x.name === "Lewis Hamilton").race + miami.find(x => x.name === "Lewis Hamilton").race,
-        score: bahrain.find(x => x.name === "Lewis Hamilton").score + saudi.find(x => x.name === "Lewis Hamilton").score + australia.find(x => x.name === "Lewis Hamilton").score + imola.find(x => x.name === "Lewis Hamilton").score + miami.find(x => x.name === "Lewis Hamilton").score
+        race: bahrain.find(x => x.name === "Lewis Hamilton").race + saudi.find(x => x.name === "Lewis Hamilton").race + australia.find(x => x.name === "Lewis Hamilton").race + imola.find(x => x.name === "Lewis Hamilton").race + miami.find(x => x.name === "Lewis Hamilton").race + spain.find(x => x.name === "Lewis Hamilton").race,
+        score: bahrain.find(x => x.name === "Lewis Hamilton").score + saudi.find(x => x.name === "Lewis Hamilton").score + australia.find(x => x.name === "Lewis Hamilton").score + imola.find(x => x.name === "Lewis Hamilton").score + miami.find(x => x.name === "Lewis Hamilton").score + spain.find(x => x.name === "Lewis Hamilton").score
     },
     {
         name: "Alonso",
-        quali: bahrain.find(x => x.name === "Fernando Alonso").quali + saudi.find(x => x.name === "Fernando Alonso").quali + australia.find(x => x.name === "Fernando Alonso").quali + imola.find(x => x.name === "Fernando Alonso").quali + miami.find(x => x.name === "Fernando Alonso").quali,
+        quali: bahrain.find(x => x.name === "Fernando Alonso").quali + saudi.find(x => x.name === "Fernando Alonso").quali + australia.find(x => x.name === "Fernando Alonso").quali + imola.find(x => x.name === "Fernando Alonso").quali + miami.find(x => x.name === "Fernando Alonso").quali + spain.find(x => x.name === "Fernando Alonso").quali,
         sprint: imola.find(x => x.name === "Fernando Alonso").sprint,
-        race: bahrain.find(x => x.name === "Fernando Alonso").race + saudi.find(x => x.name === "Fernando Alonso").race + australia.find(x => x.name === "Fernando Alonso").race + imola.find(x => x.name === "Fernando Alonso").race + miami.find(x => x.name === "Fernando Alonso").race,
-        score: bahrain.find(x => x.name === "Fernando Alonso").score + saudi.find(x => x.name === "Fernando Alonso").score + australia.find(x => x.name === "Fernando Alonso").score + imola.find(x => x.name === "Fernando Alonso").score + miami.find(x => x.name === "Fernando Alonso").score
+        race: bahrain.find(x => x.name === "Fernando Alonso").race + saudi.find(x => x.name === "Fernando Alonso").race + australia.find(x => x.name === "Fernando Alonso").race + imola.find(x => x.name === "Fernando Alonso").race + miami.find(x => x.name === "Fernando Alonso").race + spain.find(x => x.name === "Fernando Alonso").race,
+        score: bahrain.find(x => x.name === "Fernando Alonso").score + saudi.find(x => x.name === "Fernando Alonso").score + australia.find(x => x.name === "Fernando Alonso").score + imola.find(x => x.name === "Fernando Alonso").score + miami.find(x => x.name === "Fernando Alonso").score + spain.find(x => x.name === "Fernando Alonso").score
     },
     // Gaganvir
     {
         name: "Perez",
-        quali: bahrain.find(x => x.name === "Sergio Perez").quali + saudi.find(x => x.name === "Sergio Perez").quali + australia.find(x => x.name === "Sergio Perez").quali + imola.find(x => x.name === "Sergio Perez").quali + miami.find(x => x.name === "Sergio Perez").quali,
+        quali: bahrain.find(x => x.name === "Sergio Perez").quali + saudi.find(x => x.name === "Sergio Perez").quali + australia.find(x => x.name === "Sergio Perez").quali + imola.find(x => x.name === "Sergio Perez").quali + miami.find(x => x.name === "Sergio Perez").quali + spain.find(x => x.name === "Sergio Perez").quali,
         sprint: imola.find(x => x.name === "Sergio Perez").sprint,
-        race: bahrain.find(x => x.name === "Sergio Perez").race + saudi.find(x => x.name === "Sergio Perez").race + australia.find(x => x.name === "Sergio Perez").race + imola.find(x => x.name === "Sergio Perez").race + miami.find(x => x.name === "Sergio Perez").race,
-        score: bahrain.find(x => x.name === "Sergio Perez").score + saudi.find(x => x.name === "Sergio Perez").score + australia.find(x => x.name === "Sergio Perez").score + imola.find(x => x.name === "Sergio Perez").score + miami.find(x => x.name === "Sergio Perez").score
+        race: bahrain.find(x => x.name === "Sergio Perez").race + saudi.find(x => x.name === "Sergio Perez").race + australia.find(x => x.name === "Sergio Perez").race + imola.find(x => x.name === "Sergio Perez").race + miami.find(x => x.name === "Sergio Perez").race + spain.find(x => x.name === "Sergio Perez").race,
+        score: bahrain.find(x => x.name === "Sergio Perez").score + saudi.find(x => x.name === "Sergio Perez").score + australia.find(x => x.name === "Sergio Perez").score + imola.find(x => x.name === "Sergio Perez").score + miami.find(x => x.name === "Sergio Perez").score + spain.find(x => x.name === "Sergio Perez").score
     },
     {
         name: "Bottas",
-        quali: bahrain.find(x => x.name === "Valtteri Bottas").quali + saudi.find(x => x.name === "Valtteri Bottas").quali + australia.find(x => x.name === "Valtteri Bottas").quali + imola.find(x => x.name === "Valtteri Bottas").quali + miami.find(x => x.name === "Valtteri Bottas").quali,
+        quali: bahrain.find(x => x.name === "Valtteri Bottas").quali + saudi.find(x => x.name === "Valtteri Bottas").quali + australia.find(x => x.name === "Valtteri Bottas").quali + imola.find(x => x.name === "Valtteri Bottas").quali + miami.find(x => x.name === "Valtteri Bottas").quali + spain.find(x => x.name === "Valtteri Bottas").quali,
         sprint: imola.find(x => x.name === "Valtteri Bottas").sprint,
-        race: bahrain.find(x => x.name === "Valtteri Bottas").race + saudi.find(x => x.name === "Valtteri Bottas").race + australia.find(x => x.name === "Valtteri Bottas").race + imola.find(x => x.name === "Valtteri Bottas").race + miami.find(x => x.name === "Valtteri Bottas").race,
-        score: bahrain.find(x => x.name === "Valtteri Bottas").score + saudi.find(x => x.name === "Valtteri Bottas").score + australia.find(x => x.name === "Valtteri Bottas").score + imola.find(x => x.name === "Valtteri Bottas").score + miami.find(x => x.name === "Valtteri Bottas").score
+        race: bahrain.find(x => x.name === "Valtteri Bottas").race + saudi.find(x => x.name === "Valtteri Bottas").race + australia.find(x => x.name === "Valtteri Bottas").race + imola.find(x => x.name === "Valtteri Bottas").race + miami.find(x => x.name === "Valtteri Bottas").race + spain.find(x => x.name === "Valtteri Bottas").race,
+        score: bahrain.find(x => x.name === "Valtteri Bottas").score + saudi.find(x => x.name === "Valtteri Bottas").score + australia.find(x => x.name === "Valtteri Bottas").score + imola.find(x => x.name === "Valtteri Bottas").score + miami.find(x => x.name === "Valtteri Bottas").score + spain.find(x => x.name === "Valtteri Bottas").score
     },
     // Jaskaran
     {
         name: "Verstappen",
-        quali: bahrain.find(x => x.name === "Max Verstappen").quali + saudi.find(x => x.name === "Max Verstappen").quali + australia.find(x => x.name === "Max Verstappen").quali + imola.find(x => x.name === "Max Verstappen").quali + miami.find(x => x.name === "Max Verstappen").quali,
+        quali: bahrain.find(x => x.name === "Max Verstappen").quali + saudi.find(x => x.name === "Max Verstappen").quali + australia.find(x => x.name === "Max Verstappen").quali + imola.find(x => x.name === "Max Verstappen").quali + miami.find(x => x.name === "Max Verstappen").quali + spain.find(x => x.name === "Max Verstappen").quali,
         sprint: imola.find(x => x.name === "Max Verstappen").sprint,
-        race: bahrain.find(x => x.name === "Max Verstappen").race + saudi.find(x => x.name === "Max Verstappen").race + australia.find(x => x.name === "Max Verstappen").race + imola.find(x => x.name === "Max Verstappen").race + miami.find(x => x.name === "Max Verstappen").race,
-        score: bahrain.find(x => x.name === "Max Verstappen").score + saudi.find(x => x.name === "Max Verstappen").score + australia.find(x => x.name === "Max Verstappen").score + imola.find(x => x.name === "Max Verstappen").score + miami.find(x => x.name === "Max Verstappen").score
+        race: bahrain.find(x => x.name === "Max Verstappen").race + saudi.find(x => x.name === "Max Verstappen").race + australia.find(x => x.name === "Max Verstappen").race + imola.find(x => x.name === "Max Verstappen").race + miami.find(x => x.name === "Max Verstappen").race + spain.find(x => x.name === "Max Verstappen").race,
+        score: bahrain.find(x => x.name === "Max Verstappen").score + saudi.find(x => x.name === "Max Verstappen").score + australia.find(x => x.name === "Max Verstappen").score + imola.find(x => x.name === "Max Verstappen").score + miami.find(x => x.name === "Max Verstappen").score + spain.find(x => x.name === "Max Verstappen").score
     },
     {
         name: "Stroll",
-        quali: bahrain.find(x => x.name === "Lance Stroll").quali + saudi.find(x => x.name === "Lance Stroll").quali + australia.find(x => x.name === "Lance Stroll").quali + imola.find(x => x.name === "Lance Stroll").quali + miami.find(x => x.name === "Lance Stroll").quali,
+        quali: bahrain.find(x => x.name === "Lance Stroll").quali + saudi.find(x => x.name === "Lance Stroll").quali + australia.find(x => x.name === "Lance Stroll").quali + imola.find(x => x.name === "Lance Stroll").quali + miami.find(x => x.name === "Lance Stroll").quali + spain.find(x => x.name === "Lance Stroll").quali,
         sprint: imola.find(x => x.name === "Lance Stroll").sprint,
-        race: bahrain.find(x => x.name === "Lance Stroll").race + saudi.find(x => x.name === "Lance Stroll").race + australia.find(x => x.name === "Lance Stroll").race + imola.find(x => x.name === "Lance Stroll").race + miami.find(x => x.name === "Lance Stroll").race,
-        score: bahrain.find(x => x.name === "Lance Stroll").score + saudi.find(x => x.name === "Lance Stroll").score + australia.find(x => x.name === "Lance Stroll").score + imola.find(x => x.name === "Lance Stroll").score + miami.find(x => x.name === "Lance Stroll").score
+        race: bahrain.find(x => x.name === "Lance Stroll").race + saudi.find(x => x.name === "Lance Stroll").race + australia.find(x => x.name === "Lance Stroll").race + imola.find(x => x.name === "Lance Stroll").race + miami.find(x => x.name === "Lance Stroll").race + spain.find(x => x.name === "Lance Stroll").race,
+        score: bahrain.find(x => x.name === "Lance Stroll").score + saudi.find(x => x.name === "Lance Stroll").score + australia.find(x => x.name === "Lance Stroll").score + imola.find(x => x.name === "Lance Stroll").score + miami.find(x => x.name === "Lance Stroll").score + spain.find(x => x.name === "Lance Stroll").score
     },
     // Manroop
     {
         name: "Sainz",
-        quali: bahrain.find(x => x.name === "Carlos Sainz").quali + saudi.find(x => x.name === "Carlos Sainz").quali + australia.find(x => x.name === "Carlos Sainz").quali + imola.find(x => x.name === "Carlos Sainz").quali + miami.find(x => x.name === "Carlos Sainz").quali,
+        quali: bahrain.find(x => x.name === "Carlos Sainz").quali + saudi.find(x => x.name === "Carlos Sainz").quali + australia.find(x => x.name === "Carlos Sainz").quali + imola.find(x => x.name === "Carlos Sainz").quali + miami.find(x => x.name === "Carlos Sainz").quali + spain.find(x => x.name === "Carlos Sainz").quali,
         sprint: imola.find(x => x.name === "Carlos Sainz").sprint,
-        race: bahrain.find(x => x.name === "Carlos Sainz").race + saudi.find(x => x.name === "Carlos Sainz").race + australia.find(x => x.name === "Carlos Sainz").race + imola.find(x => x.name === "Carlos Sainz").race + miami.find(x => x.name === "Carlos Sainz").race,
-        score: bahrain.find(x => x.name === "Carlos Sainz").score + saudi.find(x => x.name === "Carlos Sainz").score + australia.find(x => x.name === "Carlos Sainz").score + imola.find(x => x.name === "Carlos Sainz").score + miami.find(x => x.name === "Carlos Sainz").score
+        race: bahrain.find(x => x.name === "Carlos Sainz").race + saudi.find(x => x.name === "Carlos Sainz").race + australia.find(x => x.name === "Carlos Sainz").race + imola.find(x => x.name === "Carlos Sainz").race + miami.find(x => x.name === "Carlos Sainz").race + spain.find(x => x.name === "Carlos Sainz").race,
+        score: bahrain.find(x => x.name === "Carlos Sainz").score + saudi.find(x => x.name === "Carlos Sainz").score + australia.find(x => x.name === "Carlos Sainz").score + imola.find(x => x.name === "Carlos Sainz").score + miami.find(x => x.name === "Carlos Sainz").score + spain.find(x => x.name === "Carlos Sainz").score
     },
     {
         name: "Magnussen",
-        quali: bahrain.find(x => x.name === "Kevin Magnussen").quali + saudi.find(x => x.name === "Kevin Magnussen").quali + australia.find(x => x.name === "Kevin Magnussen").quali + imola.find(x => x.name === "Kevin Magnussen").quali + miami.find(x => x.name === "Kevin Magnussen").quali,
+        quali: bahrain.find(x => x.name === "Kevin Magnussen").quali + saudi.find(x => x.name === "Kevin Magnussen").quali + australia.find(x => x.name === "Kevin Magnussen").quali + imola.find(x => x.name === "Kevin Magnussen").quali + miami.find(x => x.name === "Kevin Magnussen").quali + spain.find(x => x.name === "Kevin Magnussen").quali,
         sprint: imola.find(x => x.name === "Kevin Magnussen").sprint,
-        race: bahrain.find(x => x.name === "Kevin Magnussen").race + saudi.find(x => x.name === "Kevin Magnussen").race + australia.find(x => x.name === "Kevin Magnussen").race + imola.find(x => x.name === "Kevin Magnussen").race + miami.find(x => x.name === "Kevin Magnussen").race,
-        score: bahrain.find(x => x.name === "Kevin Magnussen").score + saudi.find(x => x.name === "Kevin Magnussen").score + australia.find(x => x.name === "Kevin Magnussen").score + imola.find(x => x.name === "Kevin Magnussen").score + miami.find(x => x.name === "Kevin Magnussen").score
+        race: bahrain.find(x => x.name === "Kevin Magnussen").race + saudi.find(x => x.name === "Kevin Magnussen").race + australia.find(x => x.name === "Kevin Magnussen").race + imola.find(x => x.name === "Kevin Magnussen").race + miami.find(x => x.name === "Kevin Magnussen").race + spain.find(x => x.name === "Kevin Magnussen").race,
+        score: bahrain.find(x => x.name === "Kevin Magnussen").score + saudi.find(x => x.name === "Kevin Magnussen").score + australia.find(x => x.name === "Kevin Magnussen").score + imola.find(x => x.name === "Kevin Magnussen").score + miami.find(x => x.name === "Kevin Magnussen").score + spain.find(x => x.name === "Kevin Magnussen").score
     },
     // Joe
     {
         name: "Gasly",
-        quali: bahrain.find(x => x.name === "Pierre Gasly").quali + saudi.find(x => x.name === "Pierre Gasly").quali + australia.find(x => x.name === "Pierre Gasly").quali + imola.find(x => x.name === "Pierre Gasly").quali + miami.find(x => x.name === "Pierre Gasly").quali,
+        quali: bahrain.find(x => x.name === "Pierre Gasly").quali + saudi.find(x => x.name === "Pierre Gasly").quali + australia.find(x => x.name === "Pierre Gasly").quali + imola.find(x => x.name === "Pierre Gasly").quali + miami.find(x => x.name === "Pierre Gasly").quali + spain.find(x => x.name === "Pierre Gasly").quali,
         sprint: imola.find(x => x.name === "Pierre Gasly").sprint,
-        race: bahrain.find(x => x.name === "Pierre Gasly").race + saudi.find(x => x.name === "Pierre Gasly").race + australia.find(x => x.name === "Pierre Gasly").race + imola.find(x => x.name === "Pierre Gasly").race + miami.find(x => x.name === "Pierre Gasly").race,
-        score: bahrain.find(x => x.name === "Pierre Gasly").score + saudi.find(x => x.name === "Pierre Gasly").score + australia.find(x => x.name === "Pierre Gasly").score + imola.find(x => x.name === "Pierre Gasly").score + miami.find(x => x.name === "Pierre Gasly").score
+        race: bahrain.find(x => x.name === "Pierre Gasly").race + saudi.find(x => x.name === "Pierre Gasly").race + australia.find(x => x.name === "Pierre Gasly").race + imola.find(x => x.name === "Pierre Gasly").race + miami.find(x => x.name === "Pierre Gasly").race + spain.find(x => x.name === "Pierre Gasly").race,
+        score: bahrain.find(x => x.name === "Pierre Gasly").score + saudi.find(x => x.name === "Pierre Gasly").score + australia.find(x => x.name === "Pierre Gasly").score + imola.find(x => x.name === "Pierre Gasly").score + miami.find(x => x.name === "Pierre Gasly").score + spain.find(x => x.name === "Pierre Gasly").score
     },
     {
         name: "Ricciardo",
-        quali: bahrain.find(x => x.name === "Daniel Ricciardo").quali + saudi.find(x => x.name === "Daniel Ricciardo").quali + australia.find(x => x.name === "Daniel Ricciardo").quali + imola.find(x => x.name === "Daniel Ricciardo").quali + miami.find(x => x.name === "Daniel Ricciardo").quali,
+        quali: bahrain.find(x => x.name === "Daniel Ricciardo").quali + saudi.find(x => x.name === "Daniel Ricciardo").quali + australia.find(x => x.name === "Daniel Ricciardo").quali + imola.find(x => x.name === "Daniel Ricciardo").quali + miami.find(x => x.name === "Daniel Ricciardo").quali + spain.find(x => x.name === "Daniel Ricciardo").quali,
         sprint: imola.find(x => x.name === "Daniel Ricciardo").sprint,
-        race: bahrain.find(x => x.name === "Daniel Ricciardo").race + saudi.find(x => x.name === "Daniel Ricciardo").race + australia.find(x => x.name === "Daniel Ricciardo").race + imola.find(x => x.name === "Daniel Ricciardo").race + miami.find(x => x.name === "Daniel Ricciardo").race,
-        score: bahrain.find(x => x.name === "Daniel Ricciardo").score + saudi.find(x => x.name === "Daniel Ricciardo").score + australia.find(x => x.name === "Daniel Ricciardo").score + imola.find(x => x.name === "Daniel Ricciardo").score + miami.find(x => x.name === "Daniel Ricciardo").score
+        race: bahrain.find(x => x.name === "Daniel Ricciardo").race + saudi.find(x => x.name === "Daniel Ricciardo").race + australia.find(x => x.name === "Daniel Ricciardo").race + imola.find(x => x.name === "Daniel Ricciardo").race + miami.find(x => x.name === "Daniel Ricciardo").race + spain.find(x => x.name === "Daniel Ricciardo").race,
+        score: bahrain.find(x => x.name === "Daniel Ricciardo").score + saudi.find(x => x.name === "Daniel Ricciardo").score + australia.find(x => x.name === "Daniel Ricciardo").score + imola.find(x => x.name === "Daniel Ricciardo").score + miami.find(x => x.name === "Daniel Ricciardo").score + spain.find(x => x.name === "Daniel Ricciardo").score
     },
     // Gurvir
     {
         name: "Norris",
-        quali: bahrain.find(x => x.name === "Lando Norris").quali + saudi.find(x => x.name === "Lando Norris").quali + australia.find(x => x.name === "Lando Norris").quali + imola.find(x => x.name === "Lando Norris").quali + miami.find(x => x.name === "Lando Norris").quali,
+        quali: bahrain.find(x => x.name === "Lando Norris").quali + saudi.find(x => x.name === "Lando Norris").quali + australia.find(x => x.name === "Lando Norris").quali + imola.find(x => x.name === "Lando Norris").quali + miami.find(x => x.name === "Lando Norris").quali + spain.find(x => x.name === "Lando Norris").quali,
         sprint: imola.find(x => x.name === "Lando Norris").sprint,
-        race: bahrain.find(x => x.name === "Lando Norris").race + saudi.find(x => x.name === "Lando Norris").race + australia.find(x => x.name === "Lando Norris").race + imola.find(x => x.name === "Lando Norris").race + miami.find(x => x.name === "Lando Norris").race,
-        score: bahrain.find(x => x.name === "Lando Norris").score + saudi.find(x => x.name === "Lando Norris").score + australia.find(x => x.name === "Lando Norris").score + imola.find(x => x.name === "Lando Norris").score + miami.find(x => x.name === "Lando Norris").score
+        race: bahrain.find(x => x.name === "Lando Norris").race + saudi.find(x => x.name === "Lando Norris").race + australia.find(x => x.name === "Lando Norris").race + imola.find(x => x.name === "Lando Norris").race + miami.find(x => x.name === "Lando Norris").race + spain.find(x => x.name === "Lando Norris").race,
+        score: bahrain.find(x => x.name === "Lando Norris").score + saudi.find(x => x.name === "Lando Norris").score + australia.find(x => x.name === "Lando Norris").score + imola.find(x => x.name === "Lando Norris").score + miami.find(x => x.name === "Lando Norris").score + spain.find(x => x.name === "Lando Norris").score
     },
     {
         name: "Russel",
-        quali: bahrain.find(x => x.name === "George Russel").quali + saudi.find(x => x.name === "George Russel").quali + australia.find(x => x.name === "George Russel").quali + imola.find(x => x.name === "George Russel").quali + miami.find(x => x.name === "George Russel").quali,
+        quali: bahrain.find(x => x.name === "George Russel").quali + saudi.find(x => x.name === "George Russel").quali + australia.find(x => x.name === "George Russel").quali + imola.find(x => x.name === "George Russel").quali + miami.find(x => x.name === "George Russel").quali + spain.find(x => x.name === "George Russel").quali,
         sprint: imola.find(x => x.name === "George Russel").sprint,
-        race: bahrain.find(x => x.name === "George Russel").race + saudi.find(x => x.name === "George Russel").race + australia.find(x => x.name === "George Russel").race + imola.find(x => x.name === "George Russel").race + miami.find(x => x.name === "George Russel").race,
-        score: bahrain.find(x => x.name === "George Russel").score + saudi.find(x => x.name === "George Russel").score + australia.find(x => x.name === "George Russel").score + imola.find(x => x.name === "George Russel").score + miami.find(x => x.name === "George Russel").score
+        race: bahrain.find(x => x.name === "George Russel").race + saudi.find(x => x.name === "George Russel").race + australia.find(x => x.name === "George Russel").race + imola.find(x => x.name === "George Russel").race + miami.find(x => x.name === "George Russel").race + spain.find(x => x.name === "George Russel").race,
+        score: bahrain.find(x => x.name === "George Russel").score + saudi.find(x => x.name === "George Russel").score + australia.find(x => x.name === "George Russel").score + imola.find(x => x.name === "George Russel").score + miami.find(x => x.name === "George Russel").score + spain.find(x => x.name === "George Russel").score
     },
 ]
 let driverStandings = drivers.sort((a, b) => b.score - a.score);
@@ -435,3 +486,4 @@ saudiStandingsFunction();
 australiaStandingsFunction();
 imolaStandingsFunction();
 miamiStandingsFunction();
+spainStandingsFunction();
